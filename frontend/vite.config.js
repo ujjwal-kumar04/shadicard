@@ -3,10 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    port: 3000,
-    open: true,
-  },
+  // server config for local dev only; not used in production
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
