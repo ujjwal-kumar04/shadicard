@@ -9,13 +9,17 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 const chatRoute = require("./routes/chat");
+const createDefaultAdmin = require('./utils/createDefaultAdmin');
 
 const app = express();
 
 /* =========================
    🔗 DATABASE
 ========================= */
-connectDB();
+
+connectDB().then(() => {
+  createDefaultAdmin();
+});
 
 /* =========================
    🧩 MIDDLEWARE
