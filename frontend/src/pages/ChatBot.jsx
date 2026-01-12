@@ -95,7 +95,7 @@ export default function ChatBot() {
         ? 'Reply in English only'
         : 'Reply in Hinglish (Hindi + English mix)';
 
-      const res = await fetch("http://localhost:5002/api/chatbot", {
+      const res = await fetch("https://shadicard.onrender.com/api/chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: `${languageContext}. User query: ${text}` })

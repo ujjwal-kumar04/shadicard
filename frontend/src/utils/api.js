@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 // Base URL for API calls (without /api)
-export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5002';
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://shadicard.onrender.com';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5002/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://shadicard.onrender.com/api',
   headers: {
     'Content-Type': 'application/json'
   }

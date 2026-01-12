@@ -130,7 +130,7 @@ const sendWelcomeEmail = async (email, name) => {
                     </div>
                     
                     <div style="text-align: center; margin: 30px 0;">
-                      <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; font-size: 16px;">
+                      <a href="${process.env.FRONTEND_URL || 'https://shadicard-sand.vercel.app'}" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; font-size: 16px;">
                         Start Exploring →
                       </a>
                     </div>

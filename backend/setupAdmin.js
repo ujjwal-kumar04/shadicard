@@ -33,7 +33,7 @@ async function createDefaultAdmin() {
     console.log('\n📧 Email: admin@shadicard.com');
     console.log('🔑 Password: admin@123');
     console.log('\n⚠️  IMPORTANT: Change this password after first login!');
-    console.log('\n🔐 Login at: http://localhost:5173/admin/login');
+    console.log('\n🔐 Login at: https://shadicard-sand.vercel.app/admin/login');
 
     process.exit(0);
   } catch (error) {
