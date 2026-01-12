@@ -25,8 +25,26 @@ connectDB().then(() => {
    🧩 MIDDLEWARE
 ========================= */
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://shadicard-sand.vercel.app',
-  credentials: true
+  origin: [
+    'https://shadicard-sand.vercel.app',
+    'https://www.shadicard-sand.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200
+}));
+
+// Handle preflight requests for all routes
+app.options('*', cors({
+  origin: [
+    'https://shadicard-sand.vercel.app',
+    'https://www.shadicard-sand.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -225,8 +243,6 @@ app.use(errorHandler);
    🚀 SERVER START
 ========================= */
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`🔥 Server running on port ${PORT}`);
+app.listen(() => {
+  console.log('🔥 Server running');
 });
